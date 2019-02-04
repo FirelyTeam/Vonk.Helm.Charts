@@ -2,8 +2,23 @@ apiVersion: v1
 entries:
   vonk:
   - apiVersion: v1
+    appVersion: 1.1.0
+    created: 2019-02-04T11:24:37.9284417+01:00
+    description: Vonk is an enterprise-grade FHIR Server meant for production environments
+      large and small alike.
+    digest: 4f78c85f4529ae75a1e151646d56438b99a1dbf5478d4339f94c92ae43517f61
+    home: https://fire.ly/vonk/
+    icon: https://fire.ly/wp-content/uploads/2017/04/vonk-1.svg
+    maintainers:
+    - email: marco@fire.ly
+      name: Marco Visser
+    name: vonk
+    urls:
+    - vonk-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1435772+01:00
+    created: 2019-02-04T11:24:37.9274432+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 2680a4ad0e2e9cbc96dffd04febee2e47b8424d85960e46c9a4ffdcb58719db0
@@ -18,7 +33,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1386284+01:00
+    created: 2019-02-04T11:24:37.9224462+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 0ef8584a559aa32f085c2d553504612be7067dce764de3707a9309826f882051
@@ -33,7 +48,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1335769+01:00
+    created: 2019-02-04T11:24:37.917442+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 2d38d054fc29c027ddfb07e4dd760df94e1971951d04a15f911d2d44951cd056
@@ -48,7 +63,7 @@ entries:
     version: 0.4.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1295771+01:00
+    created: 2019-02-04T11:24:37.9124414+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 03a46a2b1fccbd4cfcb13dc5f064582b783c2d86e92110594748ff2f3ac10a7d
@@ -63,7 +78,7 @@ entries:
     version: 0.4.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1245773+01:00
+    created: 2019-02-04T11:24:37.9064529+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 88b4c57abfc213d74975cfa3a50d3c265fe8dda5f277381161e18c1c08a8007b
@@ -78,7 +93,7 @@ entries:
     version: 0.4.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1195767+01:00
+    created: 2019-02-04T11:24:37.9024467+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: b8bdf87c83c691e51be7aace4443abc8ebe85ccdfcf9e932bf0da4331cd6412c
@@ -93,7 +108,7 @@ entries:
     version: 0.4.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1155778+01:00
+    created: 2019-02-04T11:24:37.8984464+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: fa9d48d21e083423b69a773680a5891cdb1a4ebcedfba2933a08c8dcc0fe994e
@@ -108,7 +123,7 @@ entries:
     version: 0.4.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1105967+01:00
+    created: 2019-02-04T11:24:37.8924413+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: bc37bd3574c091dbcb7b9c1ce31c709d4fd1a898688fe07614cd196f08f0c7bb
@@ -123,7 +138,7 @@ entries:
     version: 0.4.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1065762+01:00
+    created: 2019-02-04T11:24:37.8884661+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 38f9b6165bca14ad43c6b7556be6d570c6db1c9028589696ea22f348bc1af695
@@ -138,7 +153,7 @@ entries:
     version: 0.4.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.1015771+01:00
+    created: 2019-02-04T11:24:37.883442+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: dd0b546bce54d798c05fef2a2dbf9fe8e46068f138ca0c714ef645fbca77e2b5
@@ -153,7 +168,7 @@ entries:
     version: 0.4.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0975776+01:00
+    created: 2019-02-04T11:24:37.8794438+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 59d7f1f1fa24b7801943531d2cb8ebd958f2ee3a34454101e53d475c51e0dff5
@@ -168,7 +183,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0935752+01:00
+    created: 2019-02-04T11:24:37.875474+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: b7d7f1540369111fc79d5ca5aa44487de371eecf68375096088db74ec062a3ba
@@ -183,7 +198,7 @@ entries:
     version: 0.3.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0856232+01:00
+    created: 2019-02-04T11:24:37.8704402+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 18dae18459491e8cb737f750f891d769f461e1ae33ce0040151d427a7e28a3f7
@@ -198,7 +213,7 @@ entries:
     version: 0.3.6
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0805774+01:00
+    created: 2019-02-04T11:24:37.8654414+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 11dc19f095112e31cca4635dbd0c57f16c00aa3eb713f0925658d3bd6afb062d
@@ -213,7 +228,7 @@ entries:
     version: 0.3.5
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0765803+01:00
+    created: 2019-02-04T11:24:37.8584408+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 461f73785e11afeacdc636709a437a6d2d1fe15004e44dd3cbf42ec8564a8671
@@ -228,7 +243,7 @@ entries:
     version: 0.3.4
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.0725769+01:00
+    created: 2019-02-04T11:24:37.8544408+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 2a8fc315b95525c7416bfb281d6ae40c8d497df633a31b51969b26f44c01215b
@@ -243,7 +258,7 @@ entries:
     version: 0.3.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-31T11:39:41.068628+01:00
+    created: 2019-02-04T11:24:37.8504851+01:00
     description: Vonk is an enterprise-grade FHIR Server meant for production environments
       large and small alike.
     digest: 507e41f193b08de7cc309742e1a881a71168fd1677c038ffd2e31beab7907b2b
@@ -256,4 +271,4 @@ entries:
     urls:
     - vonk-0.3.2.tgz
     version: 0.3.2
-generated: 2019-01-31T11:39:41.0635755+01:00
+generated: 2019-02-04T11:24:37.844469+01:00
