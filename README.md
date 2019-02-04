@@ -125,7 +125,7 @@ The following table lists the configurable parameters of the Vonk chart and thei
 | `livenessProbe.timeoutSeconds`                           | Number of seconds after which the probe times out | `5` |
 | `livenessProbe.failureThreshold`                         | When a Pod starts and the probe fails, Kubernetes will try `failureThreshold` times before giving up. The Pod will restart | `3` |
 | `livenessProbe.periodSeconds`                            | How often (in seconds) to perform the probe | `120` |
-| `livenessProbe.successThreshold`                         | inimum consecutive successes for the probe to be considered successful after having failed | `1` |
+| `livenessProbe.successThreshold`                         | minimum consecutive successes for the probe to be considered successful after having failed | `1` |
 
 ## Obtaining and using a license
 
