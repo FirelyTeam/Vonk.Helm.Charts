@@ -54,6 +54,7 @@ The following table lists the configurable parameters of the Vonk chart and thei
 | `vonk.administration.sqLiteDbOptions.connectionString`   | [Using SQLite](http://docs.simplifier.net/vonk/configuration/db_sqlite.html#configure-sqlite) | `nil`|
 | `vonk.administrationImportOptions.importDirectory`       |                           | `./vonk-import`          |
 | `vonk.administrationImportOptions.importedDirectory`     |                         | `./vonk-imported`          |
+| `vonk.administrationImportOptions.simplifierProjects`    | See [Load Conformance Resources from simplifier.net](http://docs.simplifier.net/vonk/features/conformanceresources.html?highlight=AdministrationImportOptions#load-conformance-resources-from-simplifier-net) | `{}`          |
 | `vonk.administrationImportOptions.maxInParallel`         |                        | `5`          |
 | `vonk.bundleOptions.defaultCount`                        | `DefaultCount` sets the number of results if the user has not specified a `_count` parameter.  |  `10`|
 | `vonk.bundleOptions.maxCount`                            | `MaxCount` sets the number of results in case the user specifies a `_count` value higher than this maximum.  |  `50`|
@@ -62,6 +63,9 @@ The following table lists the configurable parameters of the Vonk chart and thei
 | `vonk.fhirCapabilities.conditionalDeleteOptions.conditionalDeleteMaxItems` | | `1` |
 | `vonk.historyOptions.maxReturnedResults`                 | | `100` |
 | `vonk.hosting.httpPort`                                  | | `4080` |
+| `vonk.informationModel.default`                                  | | `Fhir3.0` |
+| `vonk.informationModel.mapping.mode`                                  | | `Off` |
+| `vonk.informationModel.mapping.map`                                  | | `{}` |
 | `vonk.memoryOptions.simulateTransactions`                | | `false` |
 | `vonk.mongoDbOptions.connectionString`                   | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb)   | `nil` |
 | `vonk.mongoDbOptions.entryCollection`                    | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb)   | `vonkentries` |
