@@ -33,84 +33,22 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The following table lists the configurable parameters of the Vonk chart and their default values.
 
-> **Note**: Not all the parameters have been documented yet. These will be documented soon.
 
  Parameter                                                 | Description                                                               | Default                                             |
 | -------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
-| `replicaCount`                                           | Number of replicas in the replica set                                     | `1`                               |
-| `image.repository`                                       | Vonk image name                                                           | `simplifier/vonk`                            |
-| `image.tag`                                              | Vonk image tag                                                            | `1.0.0`                                      |
-| `image.pullPolicy`                                       | Vonk image pull policy                                                    | `IfNotPresent`                                             |
-| `vonk.administration.cosmosDbOptions.connectionString`   | [Using Microsoft Azure CosmosDB](http://docs.simplifier.net/vonk/configuration/db_cosmosdb.html#configure-cosmosdb)  | `nil`                        |
-| `vonk.administration.cosmosDbOptions.entryCollection`    | [Using Microsoft Azure CosmosDB](http://docs.simplifier.net/vonk/configuration/db_cosmosdb.html#configure-cosmosdb)  | `vonkentries`    |
-| `vonk.administration.mongoDbOptions.connectionString`    | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb) | `nil`                                      |
-| `vonk.administration.mongoDbOptions.entryCollection`     | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb)   | `vonkentries`                                             |
-| `vonk.administration.repository`                         |  Choose which type of repository you want. Valid values are: Memory, SQL, SQLite, MongoDb    | `SQLite`                                               |
-| `vonk.administration.security.allowedNetworks`           | [Using limited access](http://docs.simplifier.net/vonk/configuration/administration.html#limited-access)                                                 | `{}`                         |
-| `vonk.administration.security.operationsToBeSecured`     | [Using limited access](http://docs.simplifier.net/vonk/configuration/administration.html#limited-access)                                | `{}`                                                |
-| `vonk.administration.sqlDbOptions.autoUpdateDatabase`    | [Using SQL Server](http://docs.simplifier.net/vonk/configuration/db_sql.html#configure-sql) | `true`                                                |
-| `vonk.administration.sqlDbOptions.connectionString`      | [Using SQL Server](http://docs.simplifier.net/vonk/configuration/db_sql.html#configure-sql) | `nil`|
-| `vonk.administration.sqLiteDbOptions.autoUpdateDatabase` | [Using SQLite](http://docs.simplifier.net/vonk/configuration/db_sqlite.html#configure-sqlite)                                          | `true`                                                |
-| `vonk.administration.sqLiteDbOptions.connectionString`   | [Using SQLite](http://docs.simplifier.net/vonk/configuration/db_sqlite.html#configure-sqlite) | `nil`|
-| `vonk.administrationImportOptions.importDirectory`       |                           | `./vonk-import`          |
-| `vonk.administrationImportOptions.importedDirectory`     |                         | `./vonk-imported`          |
-| `vonk.administrationImportOptions.simplifierProjects`    | See [Load Conformance Resources from simplifier.net](http://docs.simplifier.net/vonk/features/conformanceresources.html?highlight=AdministrationImportOptions#load-conformance-resources-from-simplifier-net) | `{}`          |
-| `vonk.administrationImportOptions.maxInParallel`         |                        | `5`          |
-| `vonk.bundleOptions.defaultCount`                        | `DefaultCount` sets the number of results if the user has not specified a `_count` parameter.  |  `10`|
-| `vonk.bundleOptions.maxCount`                            | `MaxCount` sets the number of results in case the user specifies a `_count` value higher than this maximum.  |  `50`|
-| `vonk.cache.maxConformanceResources`                     |  |  `5000` |
-| `vonk.fhirCapabilities.conditionalDeleteOptions.conditionalDeleteType` | | `Single` |
-| `vonk.fhirCapabilities.conditionalDeleteOptions.conditionalDeleteMaxItems` | | `1` |
-| `vonk.historyOptions.maxReturnedResults`                 | | `100` |
-| `vonk.hosting.httpPort`                                  | | `4080` |
-| `vonk.informationModel.default`                                  | | `Fhir3.0` |
-| `vonk.informationModel.mapping.mode`                                  | | `Off` |
-| `vonk.informationModel.mapping.map`                                  | | `{}` |
-| `vonk.memoryOptions.simulateTransactions`                | | `false` |
-| `vonk.mongoDbOptions.connectionString`                   | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb)   | `nil` |
-| `vonk.mongoDbOptions.entryCollection`                    | [Using MongoDb](http://docs.simplifier.net/vonk/configuration/db_mongo.html#configure-mongodb)   | `vonkentries` |
-| `vonk.mongoDbOptions.simulateTransactions`               | | `false` |
-| `vonk.reindexOptions.batchSize`                          | | `100` |
-| `vonk.reindexOptions.maxDegreeOfParallelism`             | | `10` |
-| `vonk.repository`                                        | Choose which type of repository you want. Valid values are: Memory, SQL, SQLite, MongoDb | `SQLite` |
-| `vonk.sizeLimits.maxBatchEntries`                        | `MaxBatchEntries` limits the number of entries that is allowed in a batch or transaction bundle. | `200` |
-| `vonk.sizeLimits.maxBatchSize`                           | `MaxBatchSize` sets the maximum size of a batch or transaction bundle. (Note that a POST http(s)://<vonk-endpoint>/Bundle will be limited by MaxResourceSize, since the bundle must be processed as a whole then.) | `5MiB` |
-| `vonk.sizeLimits.maxResourceSize`                        | `MaxResourceSize` sets the maximum size of a resource that is sent in a create or update. | `1MiB` |
-| `vonk.smartAuthorizationOptions.audience`                | | `vonk` |
-| `vonk.smartAuthorizationOptions.enabled`                 | | `false` |
-| `vonk.smartAuthorizationOptions.filters`                 | | `{}` |
-| `vonk.smartAuthorizationOptions.protected.instanceLevelInteractions` | | `{}` |
-| `vonk.smartAuthorizationOptions.protected.typeLevelInteractions` | | `{}` |
-| `vonk.smartAuthorizationOptions.protected.wholeSystemInteractions` | | `{}` |
-| `vonk.smartAuthorizationOptions.requireHttpsToProvider`  | | `false` |
-| `vonk.sqlDbOptions.autoUpdateDatabase`                   | [Using SQL Server](http://docs.simplifier.net/vonk/configuration/db_sql.html#configure-sql) | `true` |
-| `vonk.sqlDbOptions.connectionString`                     | [Using SQL Server](http://docs.simplifier.net/vonk/configuration/db_sql.html#configure-sql) | `` |
-| `vonk.sqLiteDbOptions.autoUpdateDatabase`                | [Using SQLite](http://docs.simplifier.net/vonk/configuration/db_sqlite.html#configure-sqlite) | `true` |
-| `vonk.sqLiteDbOptions.connectionString`                  | [Using SQLite](http://docs.simplifier.net/vonk/configuration/db_sqlite.html#configure-sqlite) | `` |
-| `vonk.subscriptionEvaluatorOptions.enabled`              | | `true` |
-| `vonk.subscriptionEvaluatorOptions.repeatPeriod`         | | `20000` |
-| `vonk.subscriptionEvaluatorOptions.subscriptionBatchSize` | | `1` |
-| `vonk.supportedInteractions.instanceLevelInteractions`   | | `20000` |
-| `vonk.supportedInteractions.typeLevelInteractions`       | | `20000` |
-| `vonk.supportedInteractions.wholeSystemInteractions`     | | `20000` |
-| `vonk.supportedModel.restrictToResources`                | | `{}` |
-| `vonk.supportedModel.restrictToSearchParameters`         | | `{}` |
-| `vonk.supportedModel.restrictToCompartments`             | | `{}` |
-| `vonk.validation.allowedProfiles`                        | | `{}` |
-| `vonk.validation.validateIncomingResources`              | | `false` |
-| `log.minimumLevel.default`                               | | `Error` |
-| `log.minimumLevel.override`                              | | `{}` |
-| `log.writeTo.console.restrictedToMinimumLevel`           | | `Information` |
-| `log.writeTo.console.outputTemplate`                     | | `` |
-| `log.writeTo.rollingFile.pathFormat`                     | | `%temp%/vonk-{Date}.log` |
-| `log.writeTo.rollingFile.fileSizeLimitBytes`             | | `` |
-| `log.writeTo.rollingFile.retainedFileCountLimit`         | | `7` |
-| `log.writeTo.rollingFile.outputTemplate`                 | | `` |
-| `log.writeTo.rollingFile.restrictedToMinimumLevel`       | | `Information` |
-| `log.writeTo.applicationInsightsTraces.restrictedToMinimumLevel` | | `Information` |
-| `license.secretName`                                     | | `nil` |
-| `license.fileName`                                       | | `vonk-license.json` |
-| `license.value`                                          | | `nil` |
+| `replicaCount`                                           | Number of replicas in the replica set                                     | `1`                                                 |
+| `image.repository`                                       | Vonk image name                                                           | `simplifier/vonk`                                   |
+| `image.tag`                                              | Vonk image tag                                                            | `3.4.0`                                             |
+| `image.pullPolicy`                                       | Vonk image pull policy                                                    |`IfNotPresent`                                       |
+| `vonksettings`                                           | The override of the appsettings of Vonk. This must be a Json format. Do not forget to indent this with 2 white spaces.  | `{ }` |
+| `logsettings`                                            | The override of the logsettings of Vonk. This must be a Json format.  Do not forget to indent this with 2 white spaces. | `{ }` |
+| `license.secretName`                                     | You can  save the Vonk license key yourself as a Kubernetes secret. Use then the name of that secret here. This setting overrides `license.value`| `nil` |
+| `license.fileName`                                       | The name of the license file used internally. No reason to change that. | `vonk-license.json` |
+| `license.value`                                          | The content of the license. See also more information below. | `nil` |
+| `license.requestInfoFile`                                | Sets the location of the file with request information. This file will be used in future releases.| `nil` |
+| `license.writeRequestInfoFileInterval`                   | Sets the time interval (in minutes) to write aggregate information about processed requests to the RequestInfoFile.| `nil` |
+| `plugins[].url`                                          | An absolute url where a Vonk plugin can be downloaded| `nil` |
+| `plugins[].checksum`                                     | The checksum of the plugin | `nil` |
 | `service.type`                                           | Kubernetes Service type | `LoadBalancer` |
 | `service.port`                                           | The port which the Kubernetes service will expose the Vonk pod | `80` |
 | `ingress.enabled`                                        | Enable ingress controller resource | `false` |
@@ -120,16 +58,16 @@ The following table lists the configurable parameters of the Vonk chart and thei
 | `ingress.path`                                           | Path within the url structure | `/` |
 | `ingress.hosts[0]`                                       | Hostname to your Vonk installation | `nil` |
 | `persistence.enabled`                                    | | `false` |
-| `readinessProbe.initialDelaySeconds`                     | Number of seconds after the container has started before readiness probes are initiated | `120` |
+| `readinessProbe.initialDelaySeconds`                     | Number of seconds after the container has started before readiness probes are initiated | `15` |
 | `readinessProbe.timeoutSeconds`                          | Number of seconds after which the probe times out  | `5` |
-| `readinessProbe.failureThreshold`                        | When a Pod starts and the probe fails, Kubernetes will try `failureThreshold` times before giving up. The Pod will be marked Unready. | 3`| 
+| `readinessProbe.failureThreshold`                        | When a Pod starts and the probe fails, Kubernetes will try `failureThreshold` times before giving up. The Pod will be marked Unready. | `3`| 
 | `readinessProbe.periodSeconds`                           | How often (in seconds) to perform the probe | `10` |
 | `readinessProbe.successThreshold`                        | Minimum consecutive successes for the probe to be considered successful after having failed | `1` |
 | `livenessProbe.initialDelaySeconds`                      | Number of seconds after the container has started before liveness probes are initiated | `10` |
 | `livenessProbe.timeoutSeconds`                           | Number of seconds after which the probe times out | `5` |
 | `livenessProbe.failureThreshold`                         | When a Pod starts and the probe fails, Kubernetes will try `failureThreshold` times before giving up. The Pod will restart | `3` |
 | `livenessProbe.periodSeconds`                            | How often (in seconds) to perform the probe | `120` |
-| `livenessProbe.successThreshold`                         | minimum consecutive successes for the probe to be considered successful after having failed | `1` |
+| `livenessProbe.successThreshold`                         | inimum consecutive successes for the probe to be considered successful after having failed | `1` |
 
 ## Obtaining and using a license
 
@@ -137,7 +75,7 @@ Download the the license file from [Simplifier.net](https://simplifier.net/vonk)
 
 Transform the downloaded license in the following format and save it as `vonk-license.yaml' 
 
-```console
+```yaml
 license:
   value: '{"LicenseOptions": {"Kind": "Evaluation","ValidUntil": "2018-11-13","Licensee": "marco@fire.ly"}, "Signature": "+hLwZrrTL4tcW+l0r5yDHYSASM6EWiaVcRBN1..etc"}'
 ```
@@ -146,4 +84,37 @@ license:
 Install the Vonk Chart like this:
 ```console
 $ helm install --name my-release -f .\vonk-license.yaml firely/vonk 
+```
+
+## Override Vonk settings
+
+You can override the default configuration settings of Vonk by override the appsettings elements, like described in http://docs.simplifier.net/vonk/configuration/appsettings.html. 
+
+In the following example the `InformationModel` has been overriden. The default is now `Fhir4.0` instead of `Fhir3.0`, which is the default. Furthermore the minimal loglevel is set to `Information`.
+
+```yaml
+vonksettings: 
+  {
+    "InformationModel":{
+      "Default":"Fhir4.0"
+    }
+  }
+
+logsettings:
+  {
+    "Serilog": {
+      "MinimumLevel": {
+        "Default": "Information"
+      }
+    }
+  }
+```
+
+> **Note**: be carefull to indent the json snippet correctly! The first curly bracket should have been indented with 2 white spaces. The next element (in our example `"InformationModel"`) should be prefixed with 4 white spaces, etc.
+
+> **Note**: don't use double forward slashes (`//`) to comment out sections. JSON formally has no notion of comments.
+
+Install the Vonk Chart like this:
+```console
+$ helm install --name my-release -f .\settings.yaml firely/vonk 
 ```
