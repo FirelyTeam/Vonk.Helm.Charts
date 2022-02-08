@@ -37,8 +37,8 @@ The following table lists the configurable parameters of the firely-server chart
 
  Name                                                      | Description                                                               | Default                                             |
 | -------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
-| `image.repository`                                       | Firely Server image name                                                  | `simplifier/vonk`                                   |
-| `image.tag`                                              | Firely Server image tag                                                   | `4.5.1`                                             |
+| `image.repository`                                       | Firely Server image name                                                  | `firely/server`                                   |
+| `image.tag`                                              | Firely Server image tag                                                   | `4.7.0`                                             |
 | `image.pullPolicy`                                       | Firely Server image pull policy                                           |`IfNotPresent`                                       |
 
 ### Common parameters
@@ -98,6 +98,26 @@ The following table lists the configurable parameters of the firely-server chart
 | -------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
 | `persistence.enabled`                                    | When set to `true` a mount would be available in the Firely Server pod on path `/var/run/vonk` | `false` |
 | `persistence.existingPVClaim`                            | The name of an existing PVC to use for persistence                        | `nil` |
+
+### Firely Server Validation service Parameters
+
+This validation service is experimental and is not supported yet. 
+
+ Name                                                      | Description                                                               | Default                                             |
+| -------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
+| `validation.enabled`                            | Enable the Firely Server Validation service. When `false`, Firely Server uses its internal validator, otherwise it will use this validation service| `false` |
+| `validation.replicaCount`                       | Number of replicas in the replica set | `1`   |
+| `validation.image.registry`                     | Firely Server Validation image name | `firely.azurecr.io`   |
+| `validation.image.repository`                   | Firely Server Validation image respository | `firely/firely-cloud-components`   |
+| `validation.image.tag`                          | Firely Server Validation image tag | `latest`   |
+| `validation.image.pullPolicy`                   | Firely Server Validation image pull policy | `IfNotPresent`   |
+| `validation.port`                               | The port which the Kubernetes service will expose the Firely Server Validation pod | `8080`   |
+| `validation.persistence.carfilePVClaim`         | The PersistenceVolumeClaim where the carfiles are located  | `nil`   |
+| `validation.resources`                          | The resources limits for the Firely Server Validation container | `nil`   |
+| `validation.nodeSelector`                       | Allows you to constrain which nodes your pod is eligible to be scheduled on, based on labels on the node  | `{ }`   |
+| `validation.affinity`                           | A more elaborate way to constrain which nodes your pod is eligible to be scheduled on| `{ }`   |
+| `validation.tolerations`                        | Allow (but do not require) the pods to schedule onto nodes with matching taints | `{ }`   |
+| `validationsettings`                            | The override of the appsettings of Firely Server Validation service. This must be a Json format. Do not forget to indent this with 2 white spaces | `{ }` |
 
 ## Obtaining and using a license
 
